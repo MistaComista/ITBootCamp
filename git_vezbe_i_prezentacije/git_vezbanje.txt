@@ -1,0 +1,23 @@
+1. Napravimo lokalni repo:
+git init
+2. U njemu kreiramo fajl fileA.txt i uradimo:
+git status
+git add fileA.txt
+git commit -m "kreirali fajl a"
+3. Izmenimo fileA.txt i uradimo:
+git status
+git add fileA.txt
+git commit -m "prva promena fajla a"
+4. Izmenimo fileA.txt i uradimo:
+git status
+git add fileA.txt
+git commit -m "druga promena fajla a"
+5. Izvrsimo komandu:
+git log
+i vidimo koji je ID prvog komita i kopiramo ga
+6. Izvrsimo komandu:
+git checkout -b prva_grana id_prvog_komita
+7. fileA bi trebalo da sadrzi tekst koji je prvi komitovan
+8. Izvrsimo komandu:
+git checkout master
+fileA bi trebalo da sadrzi tekst koji je poslednji komitovan
