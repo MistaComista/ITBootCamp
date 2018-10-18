@@ -1,0 +1,20 @@
+1. Launch a new Chrome browser
+2. Open https://www.ultimateqa.com/sample-application-lifecycle-sprint-1/
+3. Fill in the text box First name
+4. Click Submit
+5. Close the browser
+
+1. Launch a new Chrome browser
+2. Open https://www.ultimateqa.com/sample-application-lifecycle-sprint-2/
+3. Fill in the text box First name
+4. Fill in the text box Last name
+4. Click Posalji
+5. Close the browser
+
+1. Launch a new Chrome browser
+2. Open https://www.ultimateqa.com/sample-application-lifecycle-sprint-2/
+3. Choose your gender
+4. Fill in the text box First name
+5. Fill in the text box Last name
+6. Click Posalji
+7. Close the browser
