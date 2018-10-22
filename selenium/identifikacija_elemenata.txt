@@ -1,0 +1,14 @@
+Kako identifikovati element na stranici:
+1. Id
+2. Class
+3. Name
+4. Link text
+5. PartialLink text
+6. CSS Selector
+7. XPath
+8. DOM (nije dobar nacin)
+
+Poredjenje XPath i CSS Selectora:
+http://elementalselenium.com/tips/33-xpath-vs-css-revisited
+
+Ispostavlja se da je XPath brzi od CSS-a
