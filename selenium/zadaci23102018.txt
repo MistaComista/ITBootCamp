@@ -1,0 +1,20 @@
+Zadatak 1
+1. Otvoriti stranicu:
+https://www.ultimateqa.com/filling-out-forms/
+2. Popuniti obrazac Name koji se nalazi na levoj strani
+3. Popuniti obrazac Message koji se nalazi na levoj strani
+4. Kliknuti na submit
+#napomena:
+obezbediti da se brise eventualni tekst koji se vec
+po otvaranju stranice nalazi u obrazcima 
+
+Zadatak 2
+1. Otvoriti stranicu:
+https://www.ultimateqa.com/filling-out-forms/
+2. Popuniti obrazac Name koji se nalazi na levoj strani
+3. Popuniti obrazac Message koji se nalazi na levoj strani
+4. Popuniti "kapcu"
+5. Kliknuti na submit
+#napomena:
+obezbediti da se brise eventualni tekst koji se vec
+po otvaranju stranice nalazi u obrazcima
