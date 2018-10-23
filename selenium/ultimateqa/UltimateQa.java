@@ -106,5 +106,45 @@ public class UltimateQa {
 		}
 		Thread.sleep(5000);
 	}
+	
+	public static void FiilTheForm(WebDriver driver) throws InterruptedException {
+		String url = "https://www.ultimateqa.com/filling-out-forms/";
+		driver.get(url);
+		WebElement nameField = driver.findElements(By.xpath("//input[@id='et_pb_contact_name_1']")).get(0);
+		nameField.clear();
+		nameField.sendKeys("test");
+		WebElement textBox = driver.findElements(By.xpath("//textarea[@id='et_pb_contact_message_1']")).get(0);
+		textBox.clear();
+		textBox.sendKeys("testing");
+		WebElement submit = driver.findElements(By.xpath("//button[@type='submit'][contains(text(),'Submit')]")).get(0);
+		submit.click();
+		Thread.sleep(5000);
+	}
+	
+	public static void FiilTheFormWithCaptcha(WebDriver driver) throws InterruptedException {
+		String url = "https://www.ultimateqa.com/filling-out-forms/";
+		driver.get(url);
+		WebElement nameField = driver.findElements(By.xpath("//input[@id='et_pb_contact_name_1']")).get(1);
+		nameField.clear();
+		nameField.sendKeys("test");
+		WebElement textBox = driver.findElements(By.xpath("//textarea[@id='et_pb_contact_message_1']")).get(1);
+		textBox.clear();
+		textBox.sendKeys("testing");
+		WebElement captcha = driver.findElement(By.xpath("//span[@class='et_pb_contact_captcha_question']"));
+		String captchaText = captcha.getText();
+		String[] parts = captchaText.split("\\+");
+		Thread.sleep(5000);
+		Integer first = Integer.parseInt(parts[0].trim()); 
+		System.out.println(String.format("Prvi argument %d", first));
+		Integer second = Integer.parseInt(parts[1].trim()); 
+		System.out.println(String.format("Drugi argument %d", second));
+		Integer result = first + second;
+		WebElement captchaResult = driver.findElement(By.xpath("//input[@name='et_pb_contact_captcha_1']"));
+		captchaResult.sendKeys(result.toString());
+		
+		WebElement submit = driver.findElements(By.xpath("//button[@type='submit'][contains(text(),'Submit')]")).get(1);
+		submit.click();
+		Thread.sleep(5000);
+	}
 }
 
