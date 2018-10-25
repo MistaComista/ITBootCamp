@@ -1,0 +1,28 @@
+Zadatak (SwitchToPopUpWindow)
+1. Otvoriti  stranicu 
+“http://toolsqa.wpengine.com/automation-practice-switch-windows/”
+2. Kliknuti na dugme “New Message Window”
+3. Proveriti da li je odgovarajuca poruka u novom prozoru
+4. Zatvoriti Pop Up Window 
+
+Zadatak 
+1. Otvoriti stranicu 
+"http://www.w3schools.com/js/tryit.asp?filename=tryjs_alert"
+2. Kliknuti na dugme "Try It"
+3. Proveriti da li je poruka:
+I am an alert box!"
+4. Zatvoriti brauser
+
+
+Zadatak (WorkingWithAlerts)
+1. Otvoriti stranicu
+“http://toolsqa.wpengine.com/automation-practice-switch-windows/”
+2. Kliknuti na dugme Alert Box”
+3. Prihvatiti Alert
+
+Zadatak (AcceptAlertWithWait)
+1. Otvoriti stranicu
+“http://toolsqa.wpengine.com/automation-practice-switch-windows/”
+2. Kliknuti na dugme “Timing Alert”
+3. Prihvatiti Alert (Alert je podesen da se pojavi za 3 sekunde, 
+koristiti WebDriverWait)
