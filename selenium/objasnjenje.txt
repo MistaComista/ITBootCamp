@@ -1,0 +1,57 @@
+U Excel fajlu smo kreirali
+parametre za unos,
+username i password
+Zatim smo koristeci Page Object Model
+kreirali odgovarajuce klase
+Poenta je da za svaki Page napravimo
+novu klasu i da u tim klasama napravimo 
+staticke metode za dohvatanje web elemenata sa te 
+strane, npr MyAccount na home page-u 
+Poenta je da ako npr promenimo mesto MyAccountu
+da onda na samo jednom mestu menjamo kako 
+dolazimo do to elementa i to u klasi HomePage
+Apache_POI_TC je klasa u kojoj se nalazi main metoda
+U njoj kreiramo driver
+driver = new ChromeDriver();
+koji moze biti i Chrome, i Firefox i IE i Safari...
+Ostatak koda ne treba da zna koji je tip drivera koji 
+se koristi 
+Podesimo da kada trazimo web element na stranici 
+da nam ne iskace odmah exception da taj element ne postoji
+jer se desava da se stranica jos nije ucitala a mi vec 
+trazimo element na njoj koji tek treba da se ucita 
+driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+Sa ovom metodom implicitlyWait podesavamo da driver 
+pokusava 10 sekundi da nadje web element na strani 
+pre nego "odustane" i zakljuci da ne postoji 
+Dohvatimo web stranicu
+driver.get(Constant.URL);
+Opet, ne zelim da imam "http://store.demoqa.com/" 
+jer ako imam na jos nekom mestu taj URL onda cu morati 
+da menjam na vise mesta kad budemo testirali neki drugi URL 
+(npr promeni se url stranice)
+Zato taj URL drzim u klasi Constant u packagu utility 
+jer ne pripada nijednoj klasi 
+Zatim uradimo SignIn akciju
+SignIn_Action.Execute(driver);
+Ovaj method (Execute) cita iz naseg excel fajla 
+username i password i ono sto je bitno 
+ON NE TRAZI ELEMENTE NA STRANICI 
+VEC POZIVA ODGOVARAJUCE METODE KLASA KOJIMA
+TI ELEMENTI PRIPADAJU PO PRIRODI STVARI!
+Na kraju upisujemo u Excel fajl rezutat testa!
+Pass!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
