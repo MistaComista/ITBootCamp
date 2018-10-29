@@ -1,16 +1,19 @@
+Link za web aplikaciju:
+http://app.invoice-factory.source-code.rs/invoices
+password: qwe123
+Ime projekta: pr_imeprezime
 1. Napraviti package pageObjects
-2. Napraviti klase  Home_Page and LogIn_Page
+2. Napraviti klase  BussinesPage, ClientsPage, InvoicesPage
 3. Napraviti Static Method za svaki element
-   na strani Home Page. Svaki metod prima parametar WebDriver a
+   na strani Bussines, Clients,Invoice . 
+   Svaki metod prima parametar WebDriver a
    vraca odgovarajuci WebElement
-4. Ponoviti isto za  LogIn Page
-5. U package-u automationFramework kreirati klasu Apache_POI_TC
-
-6. Downloadovati POI 
+4. U package-u automationFramework kreirati klasu Apache_POI_TC
+5. Downloadovati POI 
 https://archive.apache.org/dist/poi/release/bin/
 verzija poi-bin-3.10-FINAL-20140208.zip
-7. Kreirati novi package testData
-8. U taj folder staviti odgovarajuci Excel file - TestData.xls
-9. Kreirati package utility 
-10. U utility dodati klasu Constant i klasu ExcelUtils
-11. Napraviti package appModules i u njemu klasu SignIn_Action 
+6. Kreirati novi package testData
+7. U taj folder staviti odgovarajuci Excel file - TestData.xls
+8. Kreirati package utility 
+9. U utility dodati klasu Constant i klasu ExcelUtils
+10. Napraviti package appModules i u njemu klasu SignIn_Action 
