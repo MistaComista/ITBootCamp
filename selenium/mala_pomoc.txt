@@ -7,3 +7,17 @@
 				.build();
 				currency.perform();		
 	}
+	
+		public void addCountry() {
+		Action country = builder
+		.moveToElement(countriesField)
+		.click()
+		.sendKeys("serbia")
+		.build();
+		country.perform();
+		Action choose = builder
+		.moveToElement(countryList.get(0))
+		.click()
+		.build();
+		choose.perform();		
+	}
