@@ -1,0 +1,9 @@
+	public void addCurrency() {
+		Action currency = builder
+				.moveToElement(currencyField)
+				.click()
+				.moveToElement(selectBankPage.get(0))
+				.click()
+				.build();
+				currency.perform();		
+	}
