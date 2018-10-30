@@ -21,3 +21,15 @@
 		.build();
 		choose.perform();		
 	}
+	
+*****Metod koji postavlja ime drzave u klasi BussinesPage
+public static void SetCountry(WebDriver driver, String countryName) throws InterruptedException
+{   
+Actions builder = new Actions(driver);
+Actions country = builder
+.moveToElement(getCountries(driver))
+.click()
+.sendKeys(countryName);
+country.sendKeys(Keys.DOWN).sendKeys(Keys.RETURN);
+country.perform();
+}
