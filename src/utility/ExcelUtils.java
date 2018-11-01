@@ -1,7 +1,9 @@
 package utility;
         	import java.io.FileInputStream;
             import java.io.FileOutputStream;
-            import org.apache.poi.xssf.usermodel.XSSFCell;
+
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFCell;
         	import org.apache.poi.xssf.usermodel.XSSFRow;
         	import org.apache.poi.xssf.usermodel.XSSFSheet;
         	import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -15,7 +17,9 @@ package utility;
         		private static XSSFCell Cell;
 
         		private static XSSFRow Row;
-
+        		private static DataFormatter formatter ; //creating formatter using the default locale
+        		 
+        		 
     		//This method is to set the File path and to open the Excel file, Pass Excel Path and Sheetname as Arguments to this method
 
     		public static void setExcelFile(String Path,String SheetName) throws Exception {
@@ -31,7 +35,7 @@ package utility;
 					ExcelWBook = new XSSFWorkbook(ExcelFile);
 
 					ExcelWSheet = ExcelWBook.getSheet(SheetName);
-
+					formatter = new DataFormatter();
 					} catch (Exception e){
 
 						throw (e);
@@ -45,10 +49,9 @@ package utility;
     	    public static String getCellData(int RowNum, int ColNum) throws Exception{
 
        			try{
-
           			Cell = ExcelWSheet.getRow(RowNum).getCell(ColNum);
-
-          			String CellData = Cell.getStringCellValue();
+          			String CellData = formatter.formatCellValue(Cell);
+          			//String CellData = Cell.getStringCellValue();
 
           			return CellData;
 
